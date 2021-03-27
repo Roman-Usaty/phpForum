@@ -25,8 +25,8 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '2.0.41',
-    'version' => '2.0.41.0',
+    'pretty_version' => '1.0.0+no-version-set',
+    'version' => '1.0.0.0',
     'aliases' => 
     array (
     ),
@@ -254,6 +254,15 @@ private static $installed = array (
       array (
         0 => '1.10.2',
       ),
+    ),
+    'npm-asset/bootstrap' => 
+    array (
+      'pretty_version' => '4.6.0',
+      'version' => '4.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => NULL,
     ),
     'opis/closure' => 
     array (
@@ -771,8 +780,8 @@ private static $installed = array (
     ),
     'yiisoft/yii2-app-basic' => 
     array (
-      'pretty_version' => '2.0.41',
-      'version' => '2.0.41.0',
+      'pretty_version' => '1.0.0+no-version-set',
+      'version' => '1.0.0.0',
       'aliases' => 
       array (
       ),
@@ -786,6 +795,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '073c9ab0a4eb71f2485d84c96a1967130300d8fc',
+    ),
+    'yiisoft/yii2-bootstrap4' => 
+    array (
+      'pretty_version' => '2.0.9',
+      'version' => '2.0.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a75555e4a888508416fadfd0a2b94881342cdd45',
     ),
     'yiisoft/yii2-composer' => 
     array (
@@ -1055,7 +1073,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];
