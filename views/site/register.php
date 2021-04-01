@@ -9,17 +9,19 @@ use yii\helpers\BaseUrl;
 /* @var $form ActiveForm */
 $this->title = 'WebGremlins Forum';
 ?>
-<div class="site-login">
+<div class="site-index">
 
     <?php $form = ActiveForm::begin(); ?>
 
         <?= $form->field($model, 'username') ?>
+        <?= $form->field($model, 'email') ?>
         <?= $form->field($model, 'password')->passwordInput() ?>
+        <?= $form->field($model, 're_pass')->passwordInput()  ?>
     
         <div class="form-group">
-            <?= Html::submitButton('Log In', ['class' => 'btn btn-primary']) ?>
-            <?= '<p class="text"> Нет аккаунта? ' . Html::a("Зарегистрируйтесь!", BaseUrl::to(['site/register'], true, ['class' => 'text'])) ?>
+            <?= Html::submitButton('Sign Up', ['class' => 'btn btn-primary']) ?>
+            <?= '<p class="text"> Уже есть аккаунт? ' . Html::a("Войдите!", BaseUrl::to(['site/login'], true, ['class' => 'text'])) ?>
         </div>
     <?php ActiveForm::end(); ?>
 
-</div><!-- site-login -->
+</div><!-- site-index -->

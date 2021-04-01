@@ -2,52 +2,79 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'WebGremlins Forum';
 ?>
-<div class="site-index">
+ <section class="themes align-content-center align-items-baseline d-flex flex-wrap justify-content-between flex-column flex-xl-row mb-5">
+            <div class="w-100 active_themes">
+                <h2 class="title_theme pb-4 text">Активные темы</h2>
+                <ul class="list-group list-group-flush pt-3">
+                    <li class="list-group-item border-primary border-top text">An item</li>
+                    <li class="list-group-item border-primary text">A second item</li>
+                    <li class="list-group-item border-primary text">A third item</li>
+                    <li class="list-group-item border-primary text">A fourth item</li>
+                    <li class="list-group-item border-primary border-bottom text">And a fifth one</li>
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                </ul>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+            <div class=" w-100 catalog_themes">
+                <h2 class="title_theme pb-4 text">Активные категории</h2>
+                <ul class="list-group list-group-flush pt-3">
+                    <li class="list-group-item border-primary border-top text">An item</li>
+                    <li class="list-group-item border-primary text">A second item</li>
+                    <li class="list-group-item border-primary text">A third item</li>
+                    <li class="list-group-item border-primary text">A fourth item</li>
+                    <li class="list-group-item border-primary border-bottom text">And a fifth one</li>
+                </ul>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+        </section>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
-</div>
+        <section class="news_forum">
+            <h2 class="text">Новости форума</h2>
+            <ul class="list-group list-group-flush pt-3">
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </section>

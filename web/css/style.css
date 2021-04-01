@@ -1,0 +1,55 @@
+header  {
+    background-color: #0000CD;
+}
+.text {
+    font-family: 'Proxima Soft';
+    font-style: normal;
+    font-weight: normal;
+}
+.login, .register {
+    width: 120px;
+}
+#search {
+    color: white;
+    background-color: #0000CD !important;
+    width: 400px;
+}
+.search::-webkit-input-placeholder {
+    color: white;
+}
+.active_themes {
+    max-width: 500px;
+    padding: 20px;
+    border: 3px solid #0000CD;
+    border-radius: 5px;
+}
+.catalog_themes {
+    max-width: 400px;
+    padding: 20px;
+    border: 3px solid #0000CD;
+    border-radius: 5px;
+}
+.vl {
+    height: auto;
+    width: 3px;
+    background-color: #0000CD;
+}
+
+.item__desc {
+    width: max-content;
+}
+
+.item__image {
+    width: 800px;
+    margin-left: 30px;
+}
+
+.item__image img {
+    width: 100%;
+}
+
+.news_forum {
+    padding: 40px;
+    border: 3px #0000CD solid;
+    border-radius: 5px;
+}
