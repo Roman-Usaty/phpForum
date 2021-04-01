@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Users;
 
 class SiteController extends Controller
 {
@@ -64,6 +65,31 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionRegister()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new Users();
+        $model->scenario = Users::SCENARIO_SIGNUP;
+        if($model->load(\Yii::$app->request->post())){
+
+            $username = \Yii::$app->request->post()['Users']['username'];
+            $model->pass_hash = \Yii::$app->security->generatePasswordHash($model->password);
+
+            if ($model->validate() && $model->save()) {
+
+                $identity = Users::findOne(['username' => $username]);
+                Yii::$app->user->login($identity);
+
+                return $this->goHome();
+            }
+        } 
+
+        return $this->render('register', compact('model'));
+    }
+
     /**
      * Login action.
      *
@@ -75,9 +101,11 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new LoginForm();
+        $model = new Users();
+        $model->scenario = Users::SCENARIO_LOGIN;
+
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->goHome();
         }
 
         $model->password = '';

@@ -3,14 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WebGremlins Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/Proxima Soft/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/Icon.png" type="image/png">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    
+    <title>WebGremlins Forum</title>
 </head>
 <body>
-    <script src="scripts/bootstrap.bundle.js"></script> 
+    <header class=" mb-5">
+        <h1 class="d-none text">Главная Страница</h1>
+        <div class="container-xl d-flex flex-column flex-xl-row  align-items-center justify-content-between pt-3 pb-3">
+            <div class="logo mb-xl-0 mb-5">
+                <a height="100%" href="#"><img width="200px" src="assets/Logo.png" alt="Лого"></a>
+            </div>
+            <form class="d-flex align-items-center mb-xl-0 mb-5 position-relative">
+                <label class="svg_search position-absolute" for="search"><img class="ml-2 mt-2" width="36px" src="assets/search.svg" alt="svg"></label>
+                <input id="search" class="search form-control pl-5" type="search" placeholder="Введите название темы" aria-label="Search">
+            </form>
+            <div class="account d-flex align-items-center mb-xl-0 mb-3">
+                <a class="registr btn btn-outline-light mr-4 ml-4 text" href="#">Регистрация</a>
+                <a class="login  btn btn-outline-warning text" href="#">Авторизация</a>
+            </div>
+        </div>
+    </header>
+    <main class="container-xl">
+        <section class="themes align-content-center align-items-baseline d-flex flex-wrap justify-content-between flex-column flex-xl-row mb-5">
+            <div class="w-100 active_themes">
+                <h2 class="title_theme pb-4 text">Активные темы</h2>
+                <ul class="list-group list-group-flush pt-3">
+                    <li class="list-group-item border-primary border-top text">An item</li>
+                    <li class="list-group-item border-primary text">A second item</li>
+                    <li class="list-group-item border-primary text">A third item</li>
+                    <li class="list-group-item border-primary text">A fourth item</li>
+                    <li class="list-group-item border-primary border-bottom text">And a fifth one</li>
+
+                </ul>
+            </div>
+            <div class=" w-100 catalog_themes">
+                <h2 class="title_theme pb-4 text">Активные категории</h2>
+                <ul class="list-group list-group-flush pt-3">
+                    <li class="list-group-item border-primary border-top text">An item</li>
+                    <li class="list-group-item border-primary text">A second item</li>
+                    <li class="list-group-item border-primary text">A third item</li>
+                    <li class="list-group-item border-primary text">A fourth item</li>
+                    <li class="list-group-item border-primary border-bottom text">And a fifth one</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="news_forum">
+            <h2 class="text">Новости форума</h2>
+            <ul class="list-group list-group-flush pt-3">
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+                <li class="list-group-item border-primary d-flex align-items-center">
+                    <div class="item__desc">
+                        <h4 class="text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</h4>
+                        <p class="text">Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров</p>
+                    </div>
+                    <div class="item__image">
+                        <img src="assets/logo_asd.jpg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
 </body>
 </html>
