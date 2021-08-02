@@ -2,6 +2,11 @@
 
 /* @var $this yii\web\View */
 
+use app\assets\IndexAsset;
+
+
+IndexAsset::register($this);
+
 $this->title = 'WebGremlins Forum';
 ?>
  <section class="themes align-content-center align-items-baseline d-flex flex-wrap justify-content-between flex-column flex-xl-row mb-5">

@@ -1,22 +1,3 @@
-header  {
-    background-color: #0000CD;
-}
-.text {
-    font-family: 'Proxima Soft';
-    font-style: normal;
-    font-weight: normal;
-}
-.login, .register {
-    width: 120px;
-}
-#search {
-    color: white;
-    background-color: #0000CD !important;
-    width: 400px;
-}
-.search::-webkit-input-placeholder {
-    color: white;
-}
 .active_themes {
     max-width: 500px;
     padding: 20px;

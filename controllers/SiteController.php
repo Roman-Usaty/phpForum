@@ -7,9 +7,10 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
 use app\models\Users;
+use yii\web\UploadedFile;
+
+use yii\web\NotFoundHttpException;
 
 class SiteController extends Controller
 {
@@ -73,6 +74,9 @@ class SiteController extends Controller
 
         $model = new Users();
         $model->scenario = Users::SCENARIO_SIGNUP;
+        
+
+
         if($model->load(\Yii::$app->request->post())){
 
             $username = \Yii::$app->request->post()['Users']['username'];
@@ -80,6 +84,9 @@ class SiteController extends Controller
 
             if ($model->validate() && $model->save()) {
 
+                $model->image = 'assets\avatar_ex.png';
+                $model->save();
+               
                 $identity = Users::findOne(['username' => $username]);
                 Yii::$app->user->login($identity);
 
@@ -108,7 +115,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model->password = '';
+        $model->password = null;
         return $this->render('login', [
             'model' => $model,
         ]);
@@ -152,5 +159,52 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+
+    /**
+     * Displays settings page 
+     * 
+     * @return string
+     */
+
+    public function actionSettings()
+    {
+        $user = Users::findOne(['username' => \Yii::$app->user->identity->username]);
+        $user->scenario = Users::SCENARIO_CHANGE;
+
+        if (\Yii::$app->request->isPost) {
+            $post = \Yii::$app->request->post()['Users']; 
+            $user->imageFile = UploadedFile::getInstance($user, "imageFile");
+            $user->username = trim($post["username"]);
+            $user->about = trim($post["about"]);
+            if($user->validate()) {
+
+                
+                $user->save();
+                Yii::$app->user->identity->username = $user->username;
+                return $this->render('profile', [
+                    'model' => $user,
+                ]);
+            } else {
+                return $this->render('settings', [
+                    'model' => $user,
+                    'message' => 'Сохранение не удалось с ошибкой:' . $user->error,
+                ]);
+            }
+        }
+
+        return $this->render('settings', [
+            'model' => $user,
+        ]);
+    }
+
+    public function actionProfile()
+    {
+        $profile = Users::findOne(['username' => \Yii::$app->user->identity->username]);
+
+        return $this->render('profile', [
+            'model' => $profile,
+        ]);
     }
 }
